@@ -7,4 +7,4 @@ const routes = Router()
 routes.use("/users", usersRouter)
 routes.use("/notes", notesRouter)
 
-module.exports = routes
+module.exports = routes 
