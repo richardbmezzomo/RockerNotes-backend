@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 const knex = require("../database/knex")
 
 class NotesController {
   async create(request, response) {
     const { title, description, tags, links} = request.body
     const user_id = request.user.id
+=======
+const { request, response } = require("express")
+const knex = require("../database/knex")
+
+
+class NotesController {
+  async create(request, response) {
+    const { title, description, tags, links} = request.body
+    const { user_id } = request.params
+>>>>>>> 5e87f7409ad3a343b327dbb66783e080ec1d5324
 
     const note_id = await knex("notes").insert({
       title,
@@ -14,7 +25,11 @@ class NotesController {
     const linksInsert = links.map(link => {
       return {
         note_id,
+<<<<<<< HEAD
         url: link,
+=======
+        url: link
+>>>>>>> 5e87f7409ad3a343b327dbb66783e080ec1d5324
       }
     })
 
@@ -30,7 +45,11 @@ class NotesController {
 
     await knex("tags").insert(tagsInsert)
 
+<<<<<<< HEAD
     return response.json()
+=======
+    response.json()
+>>>>>>> 5e87f7409ad3a343b327dbb66783e080ec1d5324
   }
 
   async show(request, response) {
@@ -57,9 +76,13 @@ class NotesController {
   }
 
   async index(request, response) {
+<<<<<<< HEAD
     const { title, tags } = request.query
 
     const user_id = request.user.id
+=======
+    const { user_id, title, tags } = request.query
+>>>>>>> 5e87f7409ad3a343b327dbb66783e080ec1d5324
 
     let notes
 
