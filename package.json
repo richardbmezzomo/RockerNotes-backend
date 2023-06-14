@@ -1,34 +1,36 @@
 {
-  "name": "api",
+  "name": "rocketnotes-backend",
   "version": "1.0.0",
-  "description": "API desenvolvida durante o programa Explorer da Rocketseat",
-  "main": "index.js",
+  "description": "API desenvolvida no programa Explorer da Rocketseat",
+  "main": "knexfile.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "dev": "nodemon ./src/server.js",
-    "migrate": "knex migrate:latest"
+    "dev": "nodemon ./src/server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardmezzomo/RocketNotes-backend.git"
+  },
+  "keywords": [],
+  "author": "Richard Mezzomo",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardmezzomo/RocketNotes-backend/issues"
+  },
+  "homepage": "https://github.com/richardmezzomo/RocketNotes-backend#readme",
   "dependencies": {
+    "axios": "^1.4.0",
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
-<<<<<<< HEAD
     "jsonwebtoken": "^9.0.0",
     "knex": "^2.4.2",
     "multer": "^1.4.5-lts.1",
-=======
-    "knex": "^2.4.2",
->>>>>>> 5e87f7409ad3a343b327dbb66783e080ec1d5324
-    "sqlite": "^4.1.2",
-    "sqlite3": "^5.1.4"
+    "sqlite": "^4.2.0",
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "nodemon": "^2.0.22"
-=======
-    "nodemon": "^2.0.21"
->>>>>>> 5e87f7409ad3a343b327dbb66783e080ec1d5324
   }
 }
